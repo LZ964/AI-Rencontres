@@ -24,8 +24,8 @@ export default function AIAssistant({ onApplyPrompt, currentPrompt }: AIAssistan
   };
 
   return (
-    <div className="bg-slate-900 border border-purple-500/15 rounded-3xl p-5 shadow-xl relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl pointer-events-none" />
+    <div className="bg-[#120d2d] border-2 border-purple-500/45 rounded-3xl p-5 shadow-[0_0_25px_rgba(168,85,247,0.2)] relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/15 rounded-full blur-2xl pointer-events-none" />
 
       <div className="flex items-center gap-2 mb-3">
         <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
@@ -50,19 +50,21 @@ export default function AIAssistant({ onApplyPrompt, currentPrompt }: AIAssistan
         ))}
       </div>
 
-      <form onSubmit={handleSubmit} className="relative flex gap-2">
+      <form onSubmit={handleSubmit} className="relative flex gap-2" id="ai-assistant-search-form">
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          placeholder="Ex: Je cherche une fille sensuelle qui aime les cures thermales..."
-          className="flex-grow px-3.5 py-2.5 text-xs rounded-2xl bg-slate-950/80 text-white border border-purple-500/20 focus:border-purple-500 focus:outline-none placeholder-slate-500"
+          placeholder="Ex: Passionné de shibari, cuir et relation de couple stable exclusive..."
+          id="ai-assistant-prompt-input"
+          className="flex-grow px-3.5 py-2.5 text-xs rounded-2xl bg-slate-950 text-slate-100 border border-purple-500/40 focus:border-purple-400 focus:outline-none placeholder-slate-400 font-sans font-medium"
         />
         <button
           type="submit"
-          className="px-4 py-2 rounded-2xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs flex items-center justify-center gap-1 shadow-lg shadow-purple-900/30 transition-all active:scale-95"
+          id="ai-assistant-submit-btn"
+          className="px-4 py-2 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs flex items-center justify-center gap-1 shadow-lg shadow-indigo-900/40 transition-all active:scale-95 cursor-pointer shrink-0"
         >
-          Filtrer <ArrowRight className="w-3.5 h-3.5" />
+          Analyser <ArrowRight className="w-3.5 h-3.5" />
         </button>
       </form>
 

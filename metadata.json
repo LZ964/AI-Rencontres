@@ -1,6 +1,6 @@
 {
-  "name": "Liaison AI",
-  "description": "Plateforme de rencontre adulte animée par l'intelligence artificielle avec géolocalisation, bulles d'intérêts et modération automatique.",
+  "name": "Liaison AI - Gay & Bi Discoveries",
+  "description": "Plateforme de rencontre adulte 100% Gay, Bisexuel et Bi-curieux, alliant de fortes affinités kinky à des aspirations romantiques et de long terme.",
   "requestFramePermissions": ["geolocation"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

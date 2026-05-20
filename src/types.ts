@@ -2,7 +2,7 @@ export interface Profile {
   id: string;
   name: string;
   age: number;
-  gender: 'Homme' | 'Femme' | 'Autre' | 'Couple';
+  gender: 'Gay' | 'Bisexuel' | 'Bi-curieux' | 'Couple MM';
   location: {
     lat: number; // offset values for custom map
     lng: number;
@@ -18,6 +18,11 @@ export interface Profile {
   isVerified: boolean;
   moderationStatus: 'approved' | 'rejected' | 'pending';
   photos: string[];
+  isDemo?: boolean;
+  extendedNetworkOptIn?: boolean;
+  relationshipStatus?: string;
+  partnerId?: string;
+  partnerName?: string;
 }
 
 export interface ChatMessage {
@@ -28,7 +33,7 @@ export interface ChatMessage {
 }
 
 export interface UserPreferences {
-  genderFocus: ('Homme' | 'Femme' | 'Autre' | 'Couple')[];
+  genderFocus: ('Gay' | 'Bisexuel' | 'Bi-curieux' | 'Couple MM')[];
   minAge: number;
   maxAge: number;
   maxDistance: number;

@@ -1,0 +1,24 @@
+{
+  "short_name": "Liaison AI",
+  "name": "Liaison AI - Rencontres 100% Gay, Bi & Kinky",
+  "description": "L'unique plateforme de rencontre 100% dédiée à l'écosystème d'hommes Gay, Bisexuels et Bi-curieux qui allie exploration kinky et quête sincère d'une relation amoureuse durable.",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=192&h=192&q=80",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=512&h=512&q=80",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#db2777",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["social", "lifestyle"]
+}

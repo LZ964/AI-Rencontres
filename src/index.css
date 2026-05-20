@@ -1,12 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Plus Jakarta Sans", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom high-contrast theme colors used in the layout for sharp contours */
+  --color-slate-850: #292055; /* Sharp indigo-slate border */
+  --color-slate-750: #3b2f7a; /* Highly visible card separator border */
+  --color-slate-550: #94a3b8; /* Clear readable subtitle gray */
+  --color-slate-450: #cbd5e1; /* Vivid readable content text */
+  --color-slate-350: #f1f5f9; /* Near-white extremely high contrast text */
+  --color-indigo-550: #6366f1; /* Glowing indigo brand accents */
+  --color-pink-405: #f472b6; /* High illumination pink highlights */
+  --color-pink-450: #ec4899; /* Vibrant proud kinky pink tag */
+  --color-pink-850: #831843; /* Deep supportive background accent */
 }
 
 body {
-  background-color: #020617; /* slate-950 */
-  color: #f1f5f9; /* slate-100 */
+  background-color: #0c081e; /* Deep luxurious indigo night */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(219, 39, 119, 0.15) 0px, transparent 50%), /* Neon pink upper left */
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%), /* Neon violet upper right */
+    radial-gradient(at 50% 100%, rgba(135, 25, 224, 0.1) 0px, transparent 60%); /* Amethyst lower center */
+  background-attachment: fixed;
+  color: #f8fafc;
+  font-family: var(--font-sans);
+}
+
+/* Custom gorgeous scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(12, 8, 30, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(219, 39, 119, 0.3);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(219, 39, 119, 0.6);
+}
+
+/* Custom Rainbow glow animations */
+@keyframes rainbow-pulse {
+  0%, 100% { border-color: rgba(236, 72, 153, 0.3); box-shadow: 0 0 10px rgba(236, 72, 153, 0.1); }
+  50% { border-color: rgba(99, 102, 241, 0.4); box-shadow: 0 0 16px rgba(99, 102, 241, 0.2); }
+}
+
+.rainbow-glow {
+  animation: rainbow-pulse 4s infinite ease-in-out;
 }
